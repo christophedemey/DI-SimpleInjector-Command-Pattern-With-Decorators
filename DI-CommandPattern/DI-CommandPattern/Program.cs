@@ -15,10 +15,7 @@ namespace DI_CommandPattern
 
             try
             {
-                var command = container.GetInstance<ICommandHandler<MoveCustomerCommand>>();
-
-                // Inject the handler into the controller’s constructor.
-                var controller = new CustomerController(command);
+                var controller = container.GetInstance<CustomerController>();
                 controller.MoveCustomer(5, "woop");
             }
             catch (Exception ex)
@@ -32,6 +29,8 @@ namespace DI_CommandPattern
         private static Container ComposeRoot()
         {
             var container = new Container();
+
+            container.Register<CustomerController, CustomerController>();
 
             // Go look in all assemblies and register all implementations
             // of ICommandHandler<T> by their closed interface:

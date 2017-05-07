@@ -8,16 +8,16 @@ namespace DI_CommandPattern
 {
     public class CustomerController
     {
-        private ICommandHandler<MoveCustomerCommand> handler;
+        private ICommandHandler<MoveCustomerCommandModel> handler;
 
-        public CustomerController(ICommandHandler<MoveCustomerCommand> handler)
+        public CustomerController(ICommandHandler<MoveCustomerCommandModel> handler)
         {
             this.handler = handler;
         }
 
         public void MoveCustomer(int customerId, string newAddress)
         {
-            var command = new MoveCustomerCommand
+            var command = new MoveCustomerCommandModel
             {
                 CustomerId = customerId,
                 NewAddress = newAddress

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DI_CommandPattern
 {
-    public class MoveCustomerCommand
+    public class MoveCustomerCommandModel
     {
         public int CustomerId { get; set; }
         public string NewAddress { get; set; }

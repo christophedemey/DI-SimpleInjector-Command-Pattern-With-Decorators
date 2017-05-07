@@ -49,7 +49,7 @@
     <Compile Include="Decorators\AuthorizationCommandHandlerDecorator.cs" />
     <Compile Include="Decorators\DeadlockRetryCommandHandlerDecorator.cs" />
     <Compile Include="Interfaces\ICommandHandler.cs" />
-    <Compile Include="Commands\MoveCustomerCommand.cs" />
+    <Compile Include="Commands\MoveCustomerCommandModel.cs" />
     <Compile Include="Handlers\MoveCustomerCommandHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

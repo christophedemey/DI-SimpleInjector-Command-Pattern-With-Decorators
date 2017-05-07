@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DI_CommandPattern
 {
-    public class MoveCustomerCommandHandler : ICommandHandler<MoveCustomerCommand>
+    public class MoveCustomerCommandHandler : ICommandHandler<MoveCustomerCommandModel>
     {
         private readonly UnitOfWork db;
 
@@ -17,7 +17,7 @@ namespace DI_CommandPattern
             this.db = db;
         }
 
-        public void Handle(MoveCustomerCommand command)
+        public void Handle(MoveCustomerCommandModel command)
         {
             // TODO: Logic here
             //Lets have some fun with the deadlock decorator.
